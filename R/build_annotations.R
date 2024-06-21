@@ -311,7 +311,7 @@ build_cpg_annots = function(genome = annotatr::builtin_genomes(), annotations = 
         use_ah = TRUE
     } else if (genome == 'hg19') {
         use_ah = FALSE
-        con = 'http://hgdownload.cse.ucsc.edu/goldenpath/hg38/database/cpgIslandExt.txt.gz'
+        con = 'http://hgdownload.cse.ucsc.edu/goldenpath/hg19/database/cpgIslandExt.txt.gz'
     } else if (genome == 'hg38') {
         use_ah = FALSE
         con = 'http://hgdownload.cse.ucsc.edu/goldenpath/hg38/database/cpgIslandExt.txt.gz'
