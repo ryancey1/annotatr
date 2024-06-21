@@ -306,9 +306,12 @@ build_cpg_annots = function(genome = annotatr::builtin_genomes(), annotations = 
         stringsAsFactors = FALSE)
 
     # Decide whether to use URL or AnnotationHub
-    ah_genomes = c('hg19','mm9','rn5','rn4')
-    if(genome == 'hg19' || genome == 'mm9' || genome == 'rn5' || genome == 'rn4') {
+    ah_genomes = c('mm9','rn5','rn4')
+    if(genome == 'mm9' || genome == 'rn5' || genome == 'rn4') {
         use_ah = TRUE
+    } else if (genome == 'hg19') {
+        use_ah = FALSE
+        con = 'http://hgdownload.cse.ucsc.edu/goldenpath/hg38/database/cpgIslandExt.txt.gz'
     } else if (genome == 'hg38') {
         use_ah = FALSE
         con = 'http://hgdownload.cse.ucsc.edu/goldenpath/hg38/database/cpgIslandExt.txt.gz'
